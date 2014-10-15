@@ -1,10 +1,10 @@
 == Glossary 
 Logstash Glossary
 
-apache ::
+apache::
 	A very common open source web server application, which produces logs easily consumed by Logstash (Apache Common/Combined Log Format).
 
-agent ::
+agent::
 	An invocation of Logstash with a particular configuration, allowing it to operate as a "shipper", a "collector", or a combination of functionalities.
 
 
@@ -38,7 +38,7 @@ field::
 file::
 	A resource storing binary data (which might be text, image, application, etc.) on a physical storage media. In the Logstash context, a common input source which monitors a growing collection of text-based log lines.
 
-filter:
+filter::
 	An intermediary processing mechanism in the Lostash pipeline. Typically, filters act upon event data after it has been ingested via inputs, by mutating, enriching, and/or modifying the data according to configuration rules. The second phase of the typical Logstash pipeline (inputs->filters->outputs). 
 
 fluentd::
@@ -68,14 +68,14 @@ jar / jarfile::
 java::
 	An object-oriented programming language popular for its flexibility, extendability and portability.
 
-jRuby:
+jRuby::
 	JRuby is a 100% Java implementation of the Ruby programming language, which allows Ruby to run in the JVM. Logstash typically runs in JRuby, which provides it with a fast, extensible runtime environment. 
 
 kibana::
 	A visual tool for viewing time-based data which has been stored in Elasticsearch. Kibana features a powerful set of functionality based on panels which query Elasticsearch in different ways.
 
 log::
-	A snippet of textual information emitted by a device, ostensibly with some pertinent information about the status of said device.
+	A timestamped snippet of textual information emitted by a device, ostensibly with some pertinent information about the status of said device.
 
 log4j::
 	A very common Java-based logging utility.
@@ -126,7 +126,7 @@ thread::
 	Parallel sequences of execution within a process which allow a computer to perform several tasks simultaneously, in a multi-processor environment. Logstash takes advantage of this functionality, by specifying the "-w" flag
 
 type::
-	In Elasticsearch type, a type can be compared to a table in a relational database. Each type has a list of fields that can be specified for documents of that type. The mapping defines how each field in the document is analyzed. To index documents, it is required to specify both an index and a type.
+	In Elasticsearch, a type (_type) can be compared to a table in a relational database. Each type has a list of fields that can be specified for documents of that type. The mapping defines how each field in the document is analyzed. To index documents, it is required to specify both an index and a type.
 
 worker::
 	The filter thread model used by Logstash, where each worker receives an event and applies all filters, in order, before emitting the event to the output queue. This allows scalability across CPUs because many filters are CPU intensive (permitting that we have thread safety). 
